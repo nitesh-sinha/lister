@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: lister
+  name: lister
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: lister
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: lister
+    spec:
+      containers:
+      - image: niteshks/lister:3.0.2
+        name: lister
+        resources: {}
+status: {}
